@@ -1,128 +1,129 @@
 [
   {
-    "id": 1,
-    "firstName": "Zlatko",
-    "lastName": "Poposki",
-    "email": "zlatko.poposki@sedc.com"
+    "id":"1",
+    "firstName":"Zlatko",
+    "lastName":"Poposki",
+    "email":"zlatko.poposki@sedc.com",
+    "password":"Password1"
   },
   {
-    "id": 2,
-    "firstName": "Aleksandar",
-    "lastName": "Lazarov",
-    "email": "aleksandar.lazarov@sedc.com"
+    "id":"2",
+    "firstName":"Aleksandar",
+    "lastName":"Lazarov",
+    "email":"aleksandar.lazarov@sedc.com",
+    "password":"Password1"
   },
   {
-    "id": 3,
-    "firstName": "Dejan",
-    "lastName": "Monev",
-    "email": "neo.geo@sedc.com"
+    "id":"3",
+    "firstName":"Dejan",
+    "lastName":"Monev",
+    "email":"neo.geo@sedc.com",
+    "password":"Password1"
   },
   {
-    "id": 4,
-    "firstName": "Eleonora",
-    "lastName": "Levkoska",
-    "email": "eleonora.levkoska@sedc.com"
+    "id":"4",
+    "firstName":"Eleonora",
+    "lastName":"Levkoska",
+    "email":"eleonora.levkoska@sedc.com",
+    "password":"Password1"
+  },
+  {
+    "id":"5",
+    "firstName":"Igor",
+    "lastName":"Bajatovski",
+    "email":"igor.bajatovski@sedc.com",
+    "password":"Password1"
 
   },
   {
-    "id": 5,
-    "firstName": "Igor",
-    "lastName": "Bajatovski",
-    "email": "igor.bajatovski@sedc.com",
-    "password": "Password1"
-
+    "id":"6",
+    "firstName":"Kristijan",
+    "lastName":"Anastasovski",
+    "email":"kristijan.anastasovski@sedc.com",
+    "password":"Password1"
   },
   {
-    "id": 6,
-    "firstName": "Kristijan",
-    "lastName": "Anastasovski",
-    "email": "kristijan.anastasovski@sedc.com",
-    "password": "Password1"
+    "id":"7",
+    "firstName":"Filip",
+    "lastName":"Anastasovski",
+    "email":"filip.anastasovski@sedc.com",
+    "password":"Password1"
   },
   {
-    "id": 7,
-    "firstName": "Filip",
-    "lastName": "Anastasovski",
-    "email": "filip.anastasovski@sedc.com",
-    "password": "Password1"
+    "id":"8",
+    "firstName":"Nikola",
+    "lastName":"Todorovski",
+    "email":"nikola.todorovski@sedc.com",
+    "password":"Password1"
   },
   {
-    "id": 8,
-    "firstName": "Nikola",
-    "lastName": "Todorovski",
-    "email": "nikola.todorovski@sedc.com",
-    "password": "Password1"
-
+    "id":"9",
+    "firstName":"Marjan",
+    "lastName":"Ugrinovski",
+    "email":"marjan.ugrinovski@sedc.com",
+    "password":"Password1"
   },
   {
-    "id": 9,
-    "firstName": "Marjan",
-    "lastName": "Ugrinovski",
-    "email": "marjan.ugrinovski@sedc.com",
-    "password": "Password1"
-  },
-  {
-    "id": 10,
-    "firstName": "Marko",
+    "id":"10",
+    "firstName":"Marko",
     "lastName": "Naumov",
-    "email": "marko.naumov@sedc.com",
-    "password": "Password1"
+    "email":"marko.naumov@sedc.com",
+    "password":"Password1"
   },
   {
-    "id": 11,
-    "firstName": "Frosina",
-    "lastName": "Mojsoska",
-    "email": "frosina.mojsoska@sedc.com",
-    "password": "Password1"
+    "id":"11",
+    "firstName":"Frosina",
+    "lastName":"Mojsoska",
+    "email":"frosina.mojsoska@sedc.com",
+    "password":"Password1"
   },
   {
-    "id": 12,
-    "firstName": "Martin",
-    "lastName": "Dimishkovski",
-    "email": "martin.dimishkovski@sedc.com",
-    "password": "Password1"
+    "id":"12",
+    "firstName":"Martin",
+    "lastName":"Dimishkovski",
+    "email":"martin.dimishkovski@sedc.com",
+    "password":"Password1"
   },
   {
-    "id": 13,
-    "firstName": "Teodor",
-    "lastName": "Bocevski",
-    "email": "teodor.bocevski@sedc.com",
-    "password": "Password1"
+    "id":"13",
+    "firstName":"Teodor",
+    "lastName":"Bocevski",
+    "email":"teodor.bocevski@sedc.com",
+    "password":"Password1"
   },
   {
-    "id": 14,
-    "firstName": "Stefan",
-    "lastName": "Dimikj",
-    "email": "stefan.dimikj@sedc.com",
-    "password": "Password1"
+    "id":"14",
+    "firstName":"Stefan",
+    "lastName":"Dimikj",
+    "email":"stefan.dimikj@sedc.com",
+    "password":"Password1"
   },
   {
-    "id": 15,
-    "firstName": "Blagoj",
-    "lastName": "Ristovski",
-    "email": "blagoj.ristovski@sedc.com",
-    "password": "Password1"
+    "id":"15",
+    "firstName":"Blagoj",
+    "lastName":"Ristovski",
+    "email":"blagoj.ristovski@sedc.com",
+    "password":"Password1"
   },
   {
-    "id": 16,
-    "firstName": "Dime",
-    "lastName": "Trajkov",
-    "email": "dime.trajkov@sedc.com",
-    "password": "Password1"
+    "id":"16",
+    "firstName":"Dime",
+    "lastName":"Trajkov",
+    "email":"dime.trajkov@sedc.com",
+    "password":"Password1"
   },
   {
-    "id": 17,
-    "firstName": "Stefan",
-    "lastName": "Blazhevski",
-    "email": "stefan.blazhevski@sedc.com",
-    "password": "Password1"
+    "id":"17",
+    "firstName":"Stefan",
+    "lastName":"Blazhevski",
+    "email":"stefan.blazhevski@sedc.com",
+    "password":"Password1"
   },
   {
-    "id": 18,
-    "firstName": "Bojan",
-    "lastName": "Ortakov",
-    "email": "bojan.ortakov@sedc.com",
-    "password": "Password1"
+    "id":"18",
+    "firstName":"Bojan",
+    "lastName":"Ortakov",
+    "email":"bojan.ortakov@sedc.com",
+    "password":"Password1"
   }
-
   ]
