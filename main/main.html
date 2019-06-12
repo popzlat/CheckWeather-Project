@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>CheckWeather Main</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="mainStyle.css">
+
+</head>
+
+<body>
+    <div class="jumbotron text-center" style="margin-bottom:0" id="header">
+    </div>
+
+    <div class="navigation">
+        <div>
+            <span id="first" class="breadcrumb-item"><img class="imgIcon" src="images\icon.png" width="20" height="20"
+                    class="d-inline-block align-top" alt="icon" value="Refresh Page"
+                    onClick="window.location.reload()">CheckWeather</span>
+            <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+
+            <span id="dateTime"></span>
+
+        </div>
+        <div class="welcome">
+            <div id="wellcomeId">Wellcome User</div>
+            <div><button type="button" id="logOut" class="btn btn-link">Log out</button></div>
+        </div>
+    </div>
+
+    <br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <h2>Check Weather provide a national and local <br> weather forecast for cities </h2>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" id="city" type="search" placeholder="Search city"
+                        aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" id="citySearch" data-target="#exampleModal"
+                        data-toggle="modal" type="button">Search</button><br>
+                    <span id="eror"></span>
+            </div>
+            <div class="col-sm">
+                <table class="table table-striped table-dark" id="sideTable">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="tempForNextDaysForSearchCity"></th>
+                        </tr>
+                        <tr>
+                            <th scope="col" class="tommorow"></th>
+                            <th scope="col" class="afterTommorow"></th>
+                            <th scope="col" class="twoDaysafterTommorow"></th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        </form>
+    </div>
+    </div>
+    <br>
+    <br>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="showWidget">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="container">
+        <div class="row">
+            <div class="col" id="weatherGif">
+                <h2>Get the weather forecast for your current location </h2>
+
+                <button class="btn btn-primary" id="getLocation">Get Location</button>
+
+                <div id="weather_wrapper">
+                    <div class="weatherCard">
+                        <div class="currentTemp">
+                            <span class="temp">Current Location&deg;</span>
+                            <span class="location"></span>
+                        </div>
+                        <div class="currentWeather">
+                            <span class="conditions">&#xf00d;</span>
+                            <div class="info">
+                                <span class="rain"></span>
+                                <span class="wind"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="col">
+                <h4>Show map <span style='font-size:70px;'>&#8631;</span></h4>
+                <a href="" data-toggle="modal" data-target="#exampleModalCenter"><img id="mapGif" src="images/map.gif"
+                        class="rounded float-left" alt="Responsive image"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cards for static cities-->
+    <div class="card-deck">
+        <div class="card mb-4">
+            <div class="view overlay">
+                <img class="card-img-top" src="images\london.png">
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">London</h4>
+                <p class="card-text" id="london"></p>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="view overlay">
+                <img class="card-img-top" src="images\newyork.png">
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">New York</h4>
+                <p class="card-text" id="newYork"></p>
+            </div>
+        </div>
+
+        <div class="card mb-4" class="cards">
+            <div class="view overlay">
+                <img class="card-img-top" src="images\pariz.png">
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">Paris</h4>
+                <p class="card-text" id="paris"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal for map -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
+                        <iframe src="https://maps.google.com/maps?q=skopje&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="jumbotron text-center" style="margin-bottom:0" id="footerPic">
+        <p>© 2019 CheckWeather, All Rights Reserved. Zlatko Poposki</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+        <script src='../login.js'></script>
+        <script src="fillTables.js"></script>
+    <script src='main.js'></script>
+
+</body>
+
+</html>
