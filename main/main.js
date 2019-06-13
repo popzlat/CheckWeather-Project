@@ -5,38 +5,19 @@ $(document).ready(function () {
     let cityNewYork = "New York";
     let cityParis = "Paris";
 
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
     let today = new Date();
     let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
     let time = today.getHours() + ":" + today.getMinutes();
-    let thisDay = today.getDay();
-    let nameOfTheDay;
+    var arr_day = [];
 
-    const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-
-    switch (thisDay) {
-        case 1:
-            nameOfTheDay = days[0]
-            break;
-        case 2:
-            nameOfTheDay = days[1]
-            break;
-        case 3:
-            nameOfTheDay = days[2]
-            break;
-        case 4:
-            nameOfTheDay = days[3]
-            break;
-        case 5:
-            nameOfTheDay = days[4]
-            break;
-        case 6:
-            nameOfTheDay = days[5]
-            break;
-
-        default:
-            console.log(nameOfTheDay = days[6]);
-            break;
+    for(let i=1; i<= 3; i++) {
+        var tomorrow = new Date(today);
+        tomorrow.setDate(today.getDate() + i);
+        arr_day.push(days[tomorrow.getDay()])
     }
+    
 
 
     fetch('https://api.openweathermap.org/data/2.5/find?q=' + cityLondon + '&units=metric&appid=' + apiKey)
@@ -158,9 +139,9 @@ $(document).ready(function () {
     })
 
     $("#dateTime").html('<span> ' + date + '   ' + time + '</span>')
-    $(".tommorow").html(nameOfTheDay);
-    $(".afterTommorow").html(nameOfTheDay);
-    $(".twoDaysafterTommorow").html(nameOfTheDay);
+    $(".tommorow").html(arr_day[0]);
+    $(".afterTommorow").html(arr_day[1]);
+    $(".twoDaysafterTommorow").html(arr_day[2]);
     $('#logOut').click(function () {
         window.location.replace('../login.html');
         console.log("clickced")
