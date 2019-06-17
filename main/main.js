@@ -100,6 +100,7 @@ $(document).ready(function () {
                                 data.city.country + '</span>')
                             fillSideTable(data)
                         });
+
                     }
                 )
                 .catch(function () {
