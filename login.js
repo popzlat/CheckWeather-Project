@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
-let userEmail = $('#exampleInputEmail1').val();
-let userPass = $('#exampleInputPassword1').val();
+const userEmail = $('#exampleInputEmail1').val();
+const userPass = $('#exampleInputPassword1').val();
 
 
 
@@ -30,47 +30,22 @@ let userPass = $('#exampleInputPassword1').val();
   }
   getDataFromJson(jsonUrl)
 
-  let activeUser = null;
   
-
-  let userFirstName;
-
-
-  let user = {};
 
   function replaceHtml(){
     window.location.replace('main/main.html');
   }
 
 
-  // function checkUser(response, username, password) {
-  //   for (let index = 0; index < response.length; index++) {
-  //     if ( username == response[index].email ) {
-  //       if ( password==response[index].password ) {
-  //         userFirstName = response[index].firstName;
-
-  //         user.id = response[index].id;
-  //         user.firstName = response[index].firstName;
-  //         user.lastName = response[index].lastName;
-  //         user.email = response[index].email;
-  //         user = activeUser;
-  //         userFirstName = activeUser.firstName;
-
-  //       replaceHtml()
-          
-  //       }
-
-  //     }
-  //   }
-
-  // }
-
-  // checkUser(response,userEmail,userPass)
+  // login validation .......... Todoo
 
 
 
   $("#loginBtn").click(function () {
+    let username = $('#exampleInputEmail1').val();
+    console.log($('#exampleInputEmail1').val())
   replaceHtml();
+  localStorage.setItem("user", username);
   });
 
 

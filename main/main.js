@@ -18,7 +18,7 @@ $(document).ready(function () {
         arr_day.push(days[tomorrow.getDay()])
     }
     
-
+    console.log(localStorage.getItem("user"))
 
     fetch('https://api.openweathermap.org/data/2.5/find?q=' + cityLondon + '&units=metric&appid=' + apiKey)
         .then(
@@ -108,27 +108,28 @@ $(document).ready(function () {
         }
         else {
             $("#eror").html(" <br><div class='alert alert-danger alert-dismissible'><button type='button' class='close' data-dismiss='alert'>×</button>This field cannot be empty.</div>");
+            
         }
 
     })
 
     $('#getLocation').click(function () {
-        getLocation();
+       getLocation();
         setTimeout(function () {
             fetch('https://api.openweathermap.org/data/2.5/forecast?lat=' + latitude + '&lon=' + longitude + '&units=metric&appid=' + apiKey)
                 .then(
                     function (response) {
-                        if (response.status !== 200) {
-                            console.log('Looks like there was a problem. Status Code: ' +
-                                response.status);
-                            return;
-                        }
+                        // if (response.status !== 200) {
+                        //     console.log('Looks like there was a problem. Status Code: ' +
+                        //         response.status);
+                        //     return;
+                        // }
                         response.json().then(function (data) {
                             showDataforWidget(data)
-                            setTimeout(function () {
-                                $('#exampleModal').show();
+                            // setTimeout(function () {
+                            //     $('#exampleModal').show();
 
-                            }, 6000)
+                            // }, 2000)
                         });
                     }
                 )
@@ -144,6 +145,7 @@ $(document).ready(function () {
     $(".twoDaysafterTommorow").html(arr_day[2]);
     $('#logOut').click(function () {
         window.location.replace('../login.html');
+        localStorage.removeItem("user")
         console.log("clickced")
     })
 

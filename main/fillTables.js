@@ -1,6 +1,6 @@
 
     function fillSideTable(data) {
-        $('#sideTable').append(' <tbody> <tr> <td> ' + "<img src='http://openweathermap.org/img/w/" + data.list[8].weather[0].icon + ".png'>"
+        $('#sideTable').html(' <tbody> <tr> <td> ' + "<img src='http://openweathermap.org/img/w/" + data.list[8].weather[0].icon + ".png'>"
             + data.list[8].weather[0].description + '</td>  <td>  ' + "<img src='http://openweathermap.org/img/w/" + data.list[16].weather[0].icon + ".png'>"
             + data.list[16].weather[0].description + '</td>  <td>  ' + "<img src='http://openweathermap.org/img/w/" + data.list[24].weather[0].icon + ".png'>"
             + data.list[24].weather[0].description + '</td> </tr> '
