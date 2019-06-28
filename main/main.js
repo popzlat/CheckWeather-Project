@@ -79,6 +79,7 @@ $(document).ready(function () {
                             $('#showWidget').html(widget);
                             fillSideTable(data)
                         });
+
                     }
                 )
                 .catch(() => {
