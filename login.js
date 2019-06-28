@@ -1,10 +1,5 @@
 $(document).ready(function () {
 
-const userEmail = $('#exampleInputEmail1').val();
-const userPass = $('#exampleInputPassword1').val();
-
-
-
   setTimeout(function () {
     $("#gifDiv").hide();
     $("#logInModal").show();
@@ -21,7 +16,6 @@ const userPass = $('#exampleInputPassword1').val();
       async: false,
       success: function (data) {
         response = JSON.parse(data);
-        console.log(response)
       },
       error: function () {
         console.log("Users not found");
@@ -30,32 +24,53 @@ const userPass = $('#exampleInputPassword1').val();
   }
   getDataFromJson(jsonUrl)
 
-  
 
-  function replaceHtml(){
+  function replaceHtml() {
     window.location.replace('main/main.html');
   }
 
+  let user;
+  
 
-  // login validation .......... Todoo
+  function checkUser(username, password) {
+    let userFlag = true;
+    let passFlag = true;
 
+    for (let i = 0; i < response.length; i++) {
+      if (response[i].email === username) {
+        if (response[i].password === password) {
+          passFlag = false;
+        } else {
+          passFlag = true;
+        }
+        userFlag = false;
+        user = response[i].firstName;
+        break;
+      }
+    }
 
+    if (userFlag) {
+      console.log("ok")
+    }
+
+    if (!userFlag && passFlag) {
+      confirm("Wrong password")
+    }
+
+    if (userFlag && passFlag) {
+      confirm("Wrong username and wrong password")
+    }
+    if (!userFlag && !passFlag) {
+      localStorage.setItem("user", user);
+      replaceHtml();
+    }
+  }
 
   $("#loginBtn").click(function () {
-    let username = $('#exampleInputEmail1').val();
-    console.log($('#exampleInputEmail1').val())
-  replaceHtml();
-  localStorage.setItem("user", username);
+    let userEmail = $('#exampleInputEmail1').val();
+    let userPass = $('#exampleInputPassword1').val();
+    checkUser(userEmail, userPass);
   });
-
-
-
-
-
-
-
-
-
 
 
 

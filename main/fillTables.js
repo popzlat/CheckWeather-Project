@@ -1,6 +1,23 @@
 
+
+ const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+ let today = new Date();
+ let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+ let time = today.getHours() + ":" + today.getMinutes();
+ var arr_day = [];
+
+ for(let i=1; i<= 3; i++) {
+     var tomorrow = new Date(today);
+     tomorrow.setDate(today.getDate() + i);
+     arr_day.push(days[tomorrow.getDay()])
+ }
+
     function fillSideTable(data) {
-        $('#sideTable').html(' <tbody> <tr> <td> ' + "<img src='http://openweathermap.org/img/w/" + data.list[8].weather[0].icon + ".png'>"
+        $('#sideTable').html(' <tbody> <tr> <td> Next days in ' + data.city.name +
+        data.city.country + ' </td></tr> <tr> <td scope="col" > '+arr_day[0]+ ' </td> <td scope="col" > '+arr_day[1]+ '<td scope="col" > '+arr_day[2]+ ' </tr>   <tr> <td> '
+             + "<img src='http://openweathermap.org/img/w/" 
+            + data.list[8].weather[0].icon + ".png'>"
             + data.list[8].weather[0].description + '</td>  <td>  ' + "<img src='http://openweathermap.org/img/w/" + data.list[16].weather[0].icon + ".png'>"
             + data.list[16].weather[0].description + '</td>  <td>  ' + "<img src='http://openweathermap.org/img/w/" + data.list[24].weather[0].icon + ".png'>"
             + data.list[24].weather[0].description + '</td> </tr> '
