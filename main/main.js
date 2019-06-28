@@ -65,13 +65,14 @@ $(document).ready(function () {
 
     $("#citySearch").click(function () {
         let city = $('#city').val();
-        if (city != "") {
+        if (city !== "") {
             fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + city + '&units=metric&appid=a03d830140c3e415955bb97782ca97ea')
                 .then(
                     (response) => {
                         if (response.status !== 200) {
                             console.log('Looks like there was a problem. Status Code: ' +
                                 response.status);
+                                confirm("Please enter valid city name")
                             return;
                         }
                         response.json().then((data) => {

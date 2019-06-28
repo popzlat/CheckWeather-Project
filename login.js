@@ -4,7 +4,7 @@ $(document).ready(function () {
     $("#gifDiv").hide();
     $("#logInModal").show();
 
-  }, 1000);
+  }, 3000);
 
   let jsonUrl = "https://raw.githubusercontent.com/popzlat/CheckWeather-Project/master/users.json"
   let response;
