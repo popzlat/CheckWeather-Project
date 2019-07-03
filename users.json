@@ -131,6 +131,13 @@
     "lastName": "Tegovski",
     "email": "riste.tegovski@sedc.com",
     "password": "Password1"
+  },
+  {
+    "id": "20",
+    "firstName": "admin",
+    "lastName": "#",
+    "email": "administrator",
+    "password": "password"
   }
   
 ]

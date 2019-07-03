@@ -15,16 +15,12 @@
 <body>
     <div class="jumbotron text-center" style="margin-bottom:0" id="header">
     </div>
-
     <div class="navigation">
         <div>
             <span id="first" class="breadcrumb-item"><img class="imgIcon" src="images\icon.png" width="20" height="20"
                     class="d-inline-block align-top" alt="icon" value="Refresh Page"
                     onClick="window.location.reload()">CheckWeather</span>
-          
-
             <span id="dateTime"></span>
-
         </div>
         <div class="welcome">
             <div id="wellcomeId"></div>
@@ -32,40 +28,34 @@
         </div>
     </div>
 
-
     <br><br>
-   <!-- Part for search place and next days weather -->
+    <!-- Part for search place and next days weather -->
     <div class="container" id="nextDaysDiv">
         <div class="row">
             <div class="col-sm">
                 <h2>Check Weather provide a national and local <br> weather forecast for cities </h2>
-                <form class="form-inline">
-                    <input class="form-control mr-sm-2" id="city" type="search" placeholder="Search city"
-                        aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" id="citySearch" data-target="#exampleModal"
-                        data-toggle="modal" type="button">Search</button><br>
-                    <span id="eror"></span>
+                <input class="form-control mr-sm-2" id="city" type="search" placeholder="Search city">
+                <button class="btn btn-outline-success my-2 my-sm-0" id="citySearch" type="button">Search</button><br>
+
+                <span id="eror"></span>
             </div>
             <div class="col-sm">
                 <table class="table table-striped table-dark" id="sideTable">
-                     <thead>
+                    <thead>
                         <tr>
-                            <th scope="col" >Search city and see forecast for next 3 days</th>
+                            <th scope="col">Search city and see forecast for next 3 days</th>
                         </tr>
-                        
                     </thead>
                 </table>
             </div>
         </div>
-        </form>
     </div>
     <br>
     <br>
 
-
     <!-- Modal for searched location -->
-    <div class="modal fade" class="searchModal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" class="searchModal" id="exampleModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="false">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -83,15 +73,12 @@
         </div>
     </div>
 
-
     <!-- Gif for current location -->
     <div class="container">
         <div class="row">
             <div class="col" id="weatherGif">
                 <h2>Get the weather forecast for your current location </h2>
-
                 <button class="btn btn-primary" id="getLocation">Get Location</button>
-
                 <div id="weather_wrapper">
                     <div class="weatherCard">
                         <div class="currentTemp">
@@ -108,7 +95,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col">
                 <h4>Show map <span style='font-size:70px;'>&#8631;</span></h4>
                 <a href="" data-toggle="modal" data-target="#exampleModalCenter"><img id="mapGif" src="images/map.gif"
@@ -174,10 +160,6 @@
     </div>
 
 
-
-
-
-
     <div class="jumbotron text-center" style="margin-bottom:0" id="footerPic">
         <p>© 2019 CheckWeather, All Rights Reserved. Zlatko Poposki</p>
     </div>
@@ -194,5 +176,4 @@
     <script src='main.js'></script>
 
 </body>
-
 </html>

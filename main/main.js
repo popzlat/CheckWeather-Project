@@ -63,7 +63,7 @@ $(document).ready(function () {
             console.log('Something went wrong ');
         });
 
-    $("#citySearch").click(function () {
+    $("#citySearch").click(function (event) {
         let city = $('#city').val();
         if (city !== "") {
             fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + city + '&units=metric&appid=a03d830140c3e415955bb97782ca97ea')
@@ -72,15 +72,16 @@ $(document).ready(function () {
                         if (response.status !== 200) {
                             console.log('Looks like there was a problem. Status Code: ' +
                                 response.status);
-                                confirm("Please enter valid city name")
+                            confirm("Please enter valid city name")
                             return;
                         }
+                        $("#exampleModal").modal('show');
+                        $("#eror").hide();
                         response.json().then((data) => {
                             let widget = showDataForFiveDays(data);
                             $('#showWidget').html(widget);
                             fillSideTable(data)
                         });
-
                     }
                 )
                 .catch(() => {
@@ -88,6 +89,7 @@ $(document).ready(function () {
                 });
         }
         else {
+            $("#eror").show();
             $("#eror").html(" <br><div class='alert alert-danger alert-dismissible'><button type='button' class='close' data-dismiss='alert'>×</button>This field cannot be empty.</div>");
         }
     })
@@ -122,6 +124,5 @@ $(document).ready(function () {
 
 
 })
-
 
 
