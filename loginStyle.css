@@ -1,4 +1,4 @@
-
+/* Login css style */
 
 
 @import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|IBM+Plex+Mono|Indie+Flower|Istok+Web|Righteous&display=swap');
@@ -6,6 +6,7 @@
 
 body{
     background-image:url('main/images/ssky.png');
+    background-size: cover;
 }
 
 #loginTitle{

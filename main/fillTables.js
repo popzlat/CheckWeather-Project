@@ -23,7 +23,6 @@
             + '<tr> <td> Temp: ' + data.list[8].main.temp.toFixed() + '&deg;</td>  <td>Temp: ' + data.list[16].main.temp.toFixed() + '&deg;</td>  <td> Temp: ' + data.list[24].main.temp.toFixed() + '&deg;</td> </tr> </tbody>')
     }
 
-
     function showDataforWidget(data) {
 
         $(".temp").html(data.list[0].main.temp.toFixed() + '&deg')
@@ -46,8 +45,6 @@
             "<li>Pressure: " + data.list[0].main.pressure + " hPa</li> " +
             "<li>Humidity: " + data.list[0].main.humidity + " %</li> " +
             "<li>Wind Speed: " + data.list[0].wind.speed + " m/s</li></ul> ";
-
-
     }
 
     function showData(data) {
@@ -63,16 +60,5 @@
             "<li>Wind Speed: " + data.list[0].wind.speed + " m/s</li></ul> ";
     }
 
-    let latitude;
-    let longitude;
-    function getLocation() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-        } else {
-            x.innerHTML = "Geolocation is not supported by this browser.";
-        }
-    }
-    function showPosition(position) {
-        latitude = position.coords.latitude;
-        longitude = position.coords.longitude;
-    }
+   
+    

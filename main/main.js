@@ -8,6 +8,23 @@ $(document).ready(function () {
     let cityNewYork = "New York";
     let cityParis = "Paris";
 
+    let latitude;
+    let longitude;
+
+    function showPosition(position) {
+        latitude = position.coords.latitude;
+        longitude = position.coords.longitude;
+    }
+
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+
+
     fetch('https://api.openweathermap.org/data/2.5/find?q=' + cityLondon + '&units=metric&appid=' + apiKey)
         .then(
             (response) => {
@@ -63,7 +80,7 @@ $(document).ready(function () {
             console.log('Something went wrong ');
         });
 
-    $("#citySearch").click(function (event) {
+    $("#citySearch").click(function () {
         let city = $('#city').val();
         if (city !== "") {
             fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + city + '&units=metric&appid=a03d830140c3e415955bb97782ca97ea')
@@ -121,8 +138,6 @@ $(document).ready(function () {
         window.location.replace('../index.html');
         localStorage.removeItem("user")
     })
-
-
 })
 
 

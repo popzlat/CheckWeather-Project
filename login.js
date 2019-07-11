@@ -3,7 +3,6 @@ $(document).ready(function () {
   setTimeout(function () {
     $("#gifDiv").hide();
     $("#logInModal").show();
-
   }, 3000);
 
   let jsonUrl = "https://raw.githubusercontent.com/popzlat/CheckWeather-Project/master/users.json"
